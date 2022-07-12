@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdx-sO-NJr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CAE-Ke-jqu">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="kdx-sO-NJr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xoL-tq-wy3">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4wf-pQ-Hg7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDY-jJ-cUZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-970" y="88"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TrainingMetadata" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_home" translatesAutoresizingMaskIntoConstraints="NO" id="763-eM-mDZ">
+                                <rect key="frame" x="0.0" y="-202" width="414" height="1200"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rE7-Rf-vlH">
+                                <rect key="frame" x="0.0" y="772" width="414" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCv-BU-QYF" userLabel="view Map">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yJ-ut-bhq">
+                                                <rect key="frame" x="10" y="10" width="118" height="40"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.51764705879999995" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Map">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="TappedBtnMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="itX-jX-YDt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="5yJ-ut-bhq" secondAttribute="trailing" constant="10" id="Ig9-yM-umZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="5yJ-ut-bhq" secondAttribute="bottom" constant="10" id="bWr-nT-fUe"/>
+                                            <constraint firstItem="5yJ-ut-bhq" firstAttribute="leading" secondItem="oCv-BU-QYF" secondAttribute="leading" constant="10" id="fGl-zs-aQv"/>
+                                            <constraint firstItem="5yJ-ut-bhq" firstAttribute="top" secondItem="oCv-BU-QYF" secondAttribute="top" constant="10" id="fZ7-dO-6Wa"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SF-f3-Eyn" userLabel="view Cam">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9J-27-LSa">
+                                                <rect key="frame" x="10" y="10" width="118" height="40"/>
+                                                <color key="backgroundColor" red="0.17254901959999999" green="0.52549019610000003" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Camera">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="TappedBtnCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="urS-q5-Ize"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="H9J-27-LSa" secondAttribute="bottom" constant="10" id="7Ln-aP-h4b"/>
+                                            <constraint firstItem="H9J-27-LSa" firstAttribute="leading" secondItem="0SF-f3-Eyn" secondAttribute="leading" constant="10" id="YRN-FS-h94"/>
+                                            <constraint firstItem="H9J-27-LSa" firstAttribute="top" secondItem="0SF-f3-Eyn" secondAttribute="top" constant="10" id="jP1-KO-oCU"/>
+                                            <constraint firstAttribute="trailing" secondItem="H9J-27-LSa" secondAttribute="trailing" constant="10" id="yGC-LD-z5J"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-Mz-64g" userLabel="view Player">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wL-dZ-jZ7">
+                                                <rect key="frame" x="10" y="10" width="118" height="40"/>
+                                                <color key="backgroundColor" red="1" green="0.70281586877915236" blue="0.23988176203098427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="Media Player">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="TappedBtnMediaPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbZ-fM-1eS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="5wL-dZ-jZ7" secondAttribute="bottom" constant="10" id="07H-n5-1Zz"/>
+                                            <constraint firstItem="5wL-dZ-jZ7" firstAttribute="top" secondItem="Euq-Mz-64g" secondAttribute="top" constant="10" id="E6c-Av-Z5K"/>
+                                            <constraint firstItem="5wL-dZ-jZ7" firstAttribute="leading" secondItem="Euq-Mz-64g" secondAttribute="leading" constant="10" id="QHA-f7-gWC"/>
+                                            <constraint firstAttribute="trailing" secondItem="5wL-dZ-jZ7" secondAttribute="trailing" constant="10" id="fDz-IU-waU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Euq-Mz-64g" firstAttribute="width" secondItem="oCv-BU-QYF" secondAttribute="width" id="QRs-DM-XQs"/>
+                                    <constraint firstItem="0SF-f3-Eyn" firstAttribute="width" secondItem="oCv-BU-QYF" secondAttribute="width" id="q4c-2e-Lib"/>
+                                    <constraint firstAttribute="height" constant="60" id="rjV-f8-Gh5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rE7-Rf-vlH" secondAttribute="bottom" constant="30" id="AR8-dM-Hoa"/>
+                            <constraint firstAttribute="trailing" secondItem="763-eM-mDZ" secondAttribute="trailing" id="PIu-ka-28i"/>
+                            <constraint firstItem="763-eM-mDZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kr4-At-xiK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rE7-Rf-vlH" secondAttribute="trailing" id="upu-wX-IIw"/>
+                            <constraint firstItem="763-eM-mDZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="w3Z-LK-fSr"/>
+                            <constraint firstItem="rE7-Rf-vlH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wcM-s2-fd0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jZF-Ll-Wxv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_home" width="1200" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
